@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Coda+Caption:800|Dancing+Script|Luckiest+Guy|Nova+Cut');
 
 /* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -18,34 +18,34 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 #game{
@@ -115,16 +115,17 @@ table {
 .player-score{
   display: inline-block;
   padding: 5px;
-  height: 20px;
-  margin: 10px 0px;
+  height: 30px;
+  line-height: 30px;
+  margin: 10px 0px
 }
 .score{
-  display: inline-block;
+  /* display: inline-block;
   border: 1px solid #777777;
   border-radius: 10px;
   height: 20px;
   padding: 10px;
-  margin-left: 10px;
+  margin-left: 10px; */
 }
 .result-modal{
   position: absolute;
@@ -240,7 +241,6 @@ table {
   height: 150px;
   margin: 0px auto;
   transition: all 0.5s ease;
-  padding: 10px;
   border-radius: 100px;
 }
 .option img{
