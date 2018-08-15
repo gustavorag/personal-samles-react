@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
-import Utils from './Utils'
+import '../App.css';
+import Utils from '../Utils/Utils'
 
 class TasksInput extends Component{
 
@@ -15,7 +15,7 @@ class TasksInput extends Component{
       },
       task:{
         title: '',
-        desc: '',
+        description: '',
       },
       errorMsg: null,
     };
@@ -33,7 +33,7 @@ class TasksInput extends Component{
   }
 
   clearForm(){
-    this.setState({task:{title: '', desc: ''}, errorMsg: null,});
+    this.setState({task:{title: '', description: ''}, errorMsg: null,});
   }
 
   handlerSubmit(){
@@ -43,10 +43,10 @@ class TasksInput extends Component{
     }else{
       var newItem = {
         title:this.state.task.title,
-        desc:this.state.task.desc,
+        description:this.state.task.description,
       }
       this.props.onSubmitItem(newItem);
-      this.setState({task:{ title: '', desc: ''}});
+      this.setState({task:{ title: '', description: ''}});
     }
 
   }
@@ -63,10 +63,10 @@ class TasksInput extends Component{
     );
 
     return(
-      <div className="Input-box">
+      <div id="input-box" className="shaded-box">
         <label htmlFor="title">{this.state.label}</label>
         <input type="text" name="title" placeholder="Enter the new task title" onChange={this.handleValueChange} value={this.state.task.title}/>
-        <textarea type="text" name="desc" placeholder="Enter the new task description" onChange={this.handleValueChange} value={this.state.task.desc}/>
+        <textarea type="text" name="description" placeholder="Enter the new task description" onChange={this.handleValueChange} value={this.state.task.description}/>
         {errorMsg}
         <input type="button" value={this.state.buttons.clear} onClick={this.clearForm} className="clean float-left" />
         <input type="button" value={this.state.buttons.submit} onClick={this.handlerSubmit} className="ok float-right"/>

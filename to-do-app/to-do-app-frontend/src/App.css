@@ -2,91 +2,80 @@
 Author - Gustavo Rocha de Almeida Guimaraes
 BCIT Number:  A01041004
  */
-.App {
 
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-  display: inline-block;
-  position: relative;
-  top: 30px;
-}
-
-.App-header {
+/* ID SELECTORS */
+#todo-app-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
 }
-.App-header h2{
+#todo-app-header h2{
   display: inline-block;
 }
-.App-intro {
+#todo-app-intro {
   font-size: large;
 }
-.App-content{
+#todo-app-content{
   padding: 20px 50px;
   width: 75%;
   margin: 0px auto;
   text-align: center;
   position: relative;
 }
-.Input-box{
+#input-box{
   width: 300px;
   height: 400px;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px 0px #555555;
   position: absolute;
   top: 10px;
   left: 200px;
   display: inline-block;
 }
-.Input-box label{
+#input-box label{
   display: block;
   width: 100%;
   text-align: center;
 }
-.Input-box input[type="text"]{
+#input-box input[type="text"]{
   padding: 10px;
   width: 268px;
   display: block;
   margin: 10px auto;
   font-size: 1.4em;
 }
-.Input-box input[type="button"]{
+#input-box input[type="button"]{
   border: none;
   box-shadow: 0px 0px 5px 0px #555555;
   cursor:pointer;
 }
-.Input-box input[type="button"]:hover{
+#input-box input[type="button"]:hover{
   border: 1px solid #777777;
   box-shadow: 0px 0px 6px 0px #555555;
 }
-.Input-box input[type="button"]:active{
+#input-box input[type="button"]:active{
   box-shadow: none;
   font-size: 1em;
 }
-.Input-box input.ok, .Input-box input.clean{
+#input-box input.ok, #input-box input.clean{
   font-size: 1.2em;
   padding: 10px;
   border-radius: 7px;
   position: absolute;
   bottom: 15px;
 }
-.Input-box input.ok{
+#input-box input.ok{
   background-color: #c2f7d6;
   color: #2c5727;
   right: 20px;
 }
-.Input-box input.clean{
+#input-box input.clean{
   background-color: #9bc4f5;
   color: #0f174f;
   left: 20px;
 }
-.Input-box textarea{
+#input-box textarea{
   width: 278px;
   height: 220px;
   padding: 5px;
@@ -94,12 +83,11 @@ BCIT Number:  A01041004
   margin: 10px auto;
   resize: none;
 }
-.Todo-list{
+#todo-list{
   width: 400px;
   min-height: 500px;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px 0px #555555;
   margin: 0px 50px;
   margin-bottom: 50px;
   position: absolute;
@@ -109,22 +97,27 @@ BCIT Number:  A01041004
   overflow-y: auto;
 
 }
-.Todo-list ul{
+#todo-list ul{
   list-style-type: none;
   padding: 0px;
   margin: 0px;
 }
-.Todo-list li{
+#todo-list li{
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
 }
-.Todo-list li input{
+#todo-list li input{
   display: inline-block;
   width:30px;
 }
-.Task-content{
-  width:320px;
+
+/* CLASS SELECTORS */
+.shaded-box{
+  box-shadow: 0px 0px 10px -2px #555555;
+}
+.task-content{
+  width:290px;
   height: auto;
   padding: 10px;
   display: inline-block;
@@ -135,17 +128,40 @@ BCIT Number:  A01041004
   position: relative;
   transition: height 0.8s ease;
 }
-.Task-content span{
+.task-content span{
   position: absolute;
   right: 8px;
-  top: 5px;
+  top: 22px;
   transition: all 0.5s ease;
   cursor:pointer;
 }
-.Turn-arrow-down{
+.task-actions{
+  width:80px;
+  height: 20px;
+  margin-left: 10px;
+  padding: 25px 0px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #efefef;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px 0px #555555;
+}
+.task-actions .fa-check{
+  color: #549860;
+  cursor:pointer;
+}
+.task-actions .fa-trash{
+  color: #b55a55;
+  cursor:pointer;
+}
+.task-done{
+  text-decoration: line-through;
+  background-color: #9af378;
+}
+.turn-arrow-down{
   transform: rotate(90deg);
 }
-.Error-msg{
+.error-msg{
   padding: 5px 10px 5px 5px;
   border: 1px solid #522727;
   margin: 2px;
@@ -153,7 +169,7 @@ BCIT Number:  A01041004
   color: #FFFFFF;
   position:relative;
 }
-.Error-msg span{
+.error-msg span{
   position:absolute;
   top:2px;
   right:5px;
@@ -161,8 +177,4 @@ BCIT Number:  A01041004
 }
 .hidden{
   display: none;
-}
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }

@@ -23,14 +23,20 @@ class TodoList extends Component{
     }
 
     //Bindings
-    this.handleUncheckItem = this.handleUncheckItem.bind(this);
+    this.markTaskAsDone = this.markTaskAsDone.bind(this);
+    this.deleteTask = this.deleteTask.bind(this);
 
   }
 
-  handleUncheckItem(itemKey){
-    this.props.onItemRemove(itemKey);
+  markTaskAsDone(task){
+    task.done = true;
+    console.log("Updating task", task)
+    this.props.onMarkAsDone(task);
   }
 
+  deleteTask(task){
+    this.props.onDeleteTask(task);
+  }
 
   render(){
 
@@ -40,12 +46,12 @@ class TodoList extends Component{
     (
       this.props.items.map((item) => {
         return(
-          <TodoListItem key={item.key} item={item} onUncheckItem={this.handleUncheckItem} />
+          <TodoListItem key={item._id} item={item} onCheck={this.markTaskAsDone} onDelete={this.deleteTask}/>
         );
       })
     );
     return(
-      <div className="Todo-list">
+      <div id="todo-list" className="shaded-box">
         <p>{this.state.title}</p>
         <ul>
           {listItems}

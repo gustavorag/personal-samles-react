@@ -1,0 +1,9 @@
+{
+  "server":{
+    "port": 3033
+  },
+  "database":{
+    "type":"mongodb",
+    "url":"localhost/todo"
+  }
+}

@@ -1,18 +1,5 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
-.env
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
+/to-do-app-backend/node_modules
+/to-do-app-backend/*.log
+/to-do-app-frontend/node_modules
+/to-do-app-frontend/*.log
+*.log
